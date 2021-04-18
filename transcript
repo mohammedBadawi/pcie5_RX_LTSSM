@@ -53,3 +53,212 @@
 # Compile of Master_RX_LTSSM.v was successful.
 # Compile of OS_Checker.v was successful.
 # 4 compiles, 0 failed with no errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v failed with 4 errors.
+# 5 compiles, 1 failed with 4 errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v failed with 3 errors.
+# 5 compiles, 1 failed with 3 errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v failed with 2 errors.
+# 5 compiles, 1 failed with 2 errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v failed with 3 errors.
+# 5 compiles, 1 failed with 3 errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v failed with 2 errors.
+# 5 compiles, 1 failed with 2 errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.tb
+# vsim -gui work.tb 
+# Start time: 01:14:48 on Apr 19,2021
+# Loading work.tb
+# ** Error: (vsim-3033) Instantiation of 'OS_Checker' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v Line: 30
+#         Searched libraries:
+#             C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/work
+# Error loading design
+# End time: 01:14:49 on Apr 19,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 22
+vsim -gui work.tb
+# vsim -gui work.tb 
+# Start time: 01:15:39 on Apr 19,2021
+# Loading work.tb
+# ** Error: (vsim-3033) Instantiation of 'OS_Checker' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v Line: 30
+#         Searched libraries:
+#             C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/work
+# Error loading design
+# End time: 01:15:39 on Apr 19,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.tb
+# vsim -gui work.tb 
+# Start time: 01:18:25 on Apr 19,2021
+# Loading work.tb
+# Loading work.os_checker
+add wave sim:/tb/*
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.tb
+# End time: 01:21:53 on Apr 19,2021, Elapsed time: 0:03:28
+# Errors: 0, Warnings: 3
+# vsim -gui work.tb 
+# Start time: 01:21:53 on Apr 19,2021
+# Loading work.tb
+# Loading work.os_checker
+add wave sim:/tb/*
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v failed with 1 errors.
+# Compile of tb.v was successful.
+# 5 compiles, 1 failed with 1 error.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v failed with 2 errors.
+# Compile of tb.v was successful.
+# 5 compiles, 1 failed with 2 errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v failed with 1 errors.
+# Compile of tb.v was successful.
+# 5 compiles, 1 failed with 1 error.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.tb
+# End time: 01:33:43 on Apr 19,2021, Elapsed time: 0:11:50
+# Errors: 0, Warnings: 6
+# vsim -gui work.tb 
+# Start time: 01:33:45 on Apr 19,2021
+# Loading work.tb
+# Loading work.os_checker
+add wave sim:/tb/*
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.tb
+# End time: 01:39:15 on Apr 19,2021, Elapsed time: 0:05:30
+# Errors: 0, Warnings: 2
+# vsim -gui work.tb 
+# Start time: 01:39:15 on Apr 19,2021
+# Loading work.tb
+# Loading work.os_checker
+add wave sim:/tb/*
+restart
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v failed with 1 errors.
+# Compile of tb.v was successful.
+# 5 compiles, 1 failed with 1 error.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.tb
+# End time: 01:43:51 on Apr 19,2021, Elapsed time: 0:04:36
+# Errors: 0, Warnings: 5
+# vsim -gui work.tb 
+# Start time: 01:43:52 on Apr 19,2021
+# Loading work.tb
+# Loading work.os_checker
+add wave sim:/tb/*
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.tb
+# End time: 01:49:06 on Apr 19,2021, Elapsed time: 0:05:14
+# Errors: 0, Warnings: 2
+# vsim -gui work.tb 
+# Start time: 01:49:06 on Apr 19,2021
+# Loading work.tb
+# Loading work.os_checker
+add wave sim:/tb/*
+run
+# End time: 01:51:08 on Apr 19,2021, Elapsed time: 0:02:02
+# Errors: 0, Warnings: 1

@@ -9,16 +9,18 @@ module os_checker #(parameter DEVICETYPE)(
     output reg countup,
     output reg resetcounter,
     output [7:0] rateid,
-    output upconfigure_capability);
-
+    output upconfigure_capability,
+    output reg [4:0] currentState,
+    output reg [4:0]  nextState,
+output[7:0] link,output [7:0]lane,output [7:0]id);
     //LOCLA VARIABLES
-    reg[4:0] currentState,nextState;
+   // reg[4:0] currentState,nextState;
     reg[127:0] localorderedset;
     reg notEqual;
     localparam [7:0]
-    PAD = 8'b11110111,
-    TS1 = 8'b0101010,
-    TS2 = 8'b0100101;
+    PAD = 8'b11110111, //F7
+    TS1 = 8'b00101010,	//2A
+    TS2 = 8'b0100101;  //25
 //input substates from main ltssm
     localparam [3:0]
 	detectQuiet =  3'd0,
@@ -329,8 +331,10 @@ begin
         else nextState =  configCompleteUp2;
 end
 /*******************************************************************************************************/
+default:nextState = start;
 endcase
 end
     assign rateid = localorderedset[39:32];
-    assign upconfigure_capability = localorderedset[42];    
+    assign upconfigure_capability = localorderedset[42];
+assign {link,lane,id}={orderedset[15:8],orderedset[23:16],orderedset[87:80]};    
 endmodule
