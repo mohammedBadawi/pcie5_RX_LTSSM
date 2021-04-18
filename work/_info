@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vcounter
+Z0 !s110 1618707350
+!i10b 1
+!s100 `eG[aI^Sak?0mYnnWlD@Q2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IYX^V[`^`lIJPkQ;ePl=z70
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM
+w1618673759
+8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v
+FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v
+!i122 18
+L0 1 20
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1618707349.000000
+!s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vos_checker
+R0
+!i10b 1
+!s100 ^C5`dTolKmf>lP5L<?J5R3
+R1
+IN3dga?4eE4@S0NlL1jZMi3
+R2
+R3
+w1618707347
+8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v
+FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v
+!i122 19
+L0 1 124
+R4
+r1
+!s85 0
+31
+!s108 1618707350.000000
+!s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v|
+!i113 1
+R5
+R6
