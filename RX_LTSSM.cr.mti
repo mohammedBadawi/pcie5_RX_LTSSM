@@ -1,13 +1,6 @@
 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Timer.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Timer.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-} {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module os_checker
-
-Top level modules:
-	os_checker
-
 } {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
