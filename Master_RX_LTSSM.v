@@ -19,7 +19,7 @@ module  masterRxLTSSM #(parameter MAXLANES)(
     output reg writeUpconfig);
 
     
-    reg[1:0] currentState,nextState;
+    reg[1:0] currentState,nextState,lastState;
     reg[3:0]count;
     reg[5:0]timeToWait;
 
@@ -45,10 +45,11 @@ module  masterRxLTSSM #(parameter MAXLANES)(
     failed = 2'b11;
 
     //CURRENT STATE FF
-always @(posedge clk or negedge reset or posedge forceDetect)
+always @(posedge clk or negedge reset)
 begin
-    if(!reset || !forceDetect)
+    if(!reset)
     begin
+	lastState <= start;
         currentState <= start;
     end
     else
@@ -65,9 +66,10 @@ always @(*)
      case(currentState)
         start:
         begin
-            enableTimer = 1'b0;
-            resetTimer = 1'b0;
-            resetOsCheckers = 16'b0;
+            
+	    if(substate != lastState)
+	    begin
+	    resetOsCheckers = {16{1'b1}};
             if(substate==pollingActive||substate==configurationComplete)
                 begin
                     count = 4'd8;
@@ -92,18 +94,25 @@ always @(*)
                         timeToWait = 6'd48;
                         nextState = counting;
                 end
+	    lastState = substate;
+	    end
+		
             else 
                 begin
                     count=4'd0;
                     timeToWait = 6'd0;
+		    enableTimer = 1'b0;
+                    resetTimer = 1'b0;
+                    resetOsCheckers = 16'b0;
                     nextState = start;
                 end
+	
         end
      
         counting:
         begin
-            resetOsCheckers = 16'b1;
-            if(!timeOut && countersValues >= {numberOfDetectedLanes{count}})
+            resetOsCheckers = {16{1'b1}};
+            if(!timeOut && countersValues >= {64{1'b1}})
             begin
                 enableTimer = 1'b1;
                 resetTimer = 1'b1;
