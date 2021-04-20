@@ -10,71 +10,71 @@ z2
 cModel Technology
 dC:/intelFPGA/20.1
 vcounter
-!s110 1618789736
+Z0 !s110 1618947737
 !i10b 1
-!s100 `eG[aI^Sak?0mYnnWlD@Q2
-Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IYX^V[`^`lIJPkQ;ePl=z70
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM
-w1618673759
+!s100 NnNFhh@6VZENoGZPZcAMH2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I=d[lcEohM<A]=?ZYjc@Ll0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM
+w1618926571
 8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v
 FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v
-!i122 84
-L0 1 20
-Z3 OV;L;2020.1;71
+!i122 215
+L0 1 10
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z4 !s108 1618789736.000000
+Z5 !s108 1618947737.000000
 !s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
 vos_checker
-Z7 !s110 1618789737
-!i10b 1
-!s100 i=W2=<8[jY_:lF^CPT^7k1
 R0
-IoW7kh2Ik^njK?ISA[_G4o3
+!i10b 1
+!s100 z[YHXkH;<C^C0c`GXQi9^0
 R1
+IFeN1nH69l_VHlBibl4lh=2
 R2
-w1618789342
+R3
+w1618947071
 8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v
 FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v
-!i122 85
-L0 1 340
-R3
+!i122 216
+L0 1 385
+R4
 r1
 !s85 0
 31
-R4
+R5
 !s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v|
 !i113 1
-R5
 R6
-vtb
 R7
-!i10b 1
-!s100 ;3DJ3D=1Gg3knI38h9:D:0
+vtb
 R0
-IKHmII23UUAo[3hOfGPXJ62
+!i10b 1
+!s100 XN2`oIdn6P>No?1BKDYHH2
 R1
+IZ`04bj76>_l8W`nUC<DUz3
 R2
-w1618789734
+R3
+w1618947734
 8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v
 FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v
-!i122 86
-L0 1 66
-R3
+!i122 217
+L0 1 113
+R4
 r1
 !s85 0
 31
-!s108 1618789737.000000
+R5
 !s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v|
 !i113 1
-R5
 R6
+R7

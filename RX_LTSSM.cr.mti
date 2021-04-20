@@ -15,8 +15,10 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	os_checker
 
-} {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v
+} {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v {0 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module masterRxLTSSM
+** Error (suppressible): C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v(106): (vlog-8303) Repetition multiplier must be constant.
 
 } {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

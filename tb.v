@@ -12,6 +12,7 @@ module tb;
     wire upconfigure_capability;
 wire[4:0]currentState,nextState;
 wire [7:0]link,lane,id;
+wire[7:0]currentcount;
  localparam [7:0]
     PAD = 8'b11110111, //F7
     TS1 = 8'b00101010,	//2A
@@ -40,6 +41,8 @@ os_checker #(0) test(clk,
     resetcounter,
     rateid,
     upconfigure_capability,currentState,nextState,link,lane,id);
+counter #(8)Counter(resetcounter,clk,countup,currentcount);
+
 initial
 begin
 clk = 0;
@@ -47,18 +50,62 @@ reset = 0;
 #12
 reset = 1;
 substate = pollingActive;
+#10
 valid = 1'b1;
-orderedset = 128'h25252525252525AAAAF7F7F7;
+orderedset = 128'h25252525252525AAAAF7F7F7; //counter = 1
 #10
-orderedset = 128'h25252525252525AAAAF7F7F7;
+orderedset = 128'h25252525252525AAAAF7F7F7; //counter = 2
 #10
-orderedset = 128'h25252525252525AAAAF7F7F7;
+orderedset = 128'h25252525252525AAAAF7F7F7; //counter = 3
 #10
-orderedset = 128'h25252525252525AAAAAAAAAA;
+orderedset = 128'h25252525252525AAAAAAAAAA; //counter = 0
 #10
-orderedset = 128'h25252525252525AAAAF7F7F7;
+orderedset = 128'h25252525252525AAAAF7F7F7; //counter = 1
 #10
-orderedset = 128'h25252525252525AAAAF7F7F7;
+orderedset = 128'h25252525252525AAAAF7F7F7; //counter = 2
+#10
+reset = 0;
+#10
+valid = 0;
+reset = 1;
+substate = pollingConfiguration;
+#10
+valid = 1'b1;
+orderedset = 128'h25252525252525AAAAF7F7F7; //counter = 1
+#10
+orderedset = 128'h25252525252525AAAAF7F7F7; //counter = 2
+#10
+orderedset = 128'h25252525252525AAAAF7F7F7; //counter = 3
+#10
+orderedset = 128'h25252525252525AAAAAAAAAA; //counter = 0
+#10
+orderedset = 128'h25252525252525AAAAF7F7F7; //counter = 1
+#10
+orderedset = 128'h25252525252525AAAAF7F7F7; //counter = 2
+#10
+reset = 0;
+
+#10
+valid = 0;
+reset = 1;
+substate = configurationLinkWidthStart;
+linkNumber = 1;
+#10
+valid = 1'b1;
+orderedset = 128'h2A2A2A2A2A2A2AAAAAF701F7; //counter = 1
+#10
+orderedset = 128'h2A2A2A2A2A2A2AAAAAF701F7; //counter = 2
+#10
+orderedset = 128'h2A2A2A2A2A2A2AAAAAF701F7; //counter = 3
+#10
+orderedset = 128'h25252525252525AAAAAAAAAA; //counter = 0
+#10
+orderedset = 128'h2A2A2A2A2A2A2AAAAAF701F7; //counter = 1
+#10
+orderedset = 128'h2A2A2A2A2A2A2AAAAAF701F7; //counter = 2
+#10
+reset = 0;
+
 end
 
 

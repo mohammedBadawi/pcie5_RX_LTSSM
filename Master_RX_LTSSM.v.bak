@@ -16,8 +16,8 @@ module  masterRxLTSSM #(parameter MAXLANES)(
     output reg enableTimer,
     output reg resetTimer,
     output reg writeRateId,
-    output reg writeUpconfig);
-
+    output reg writeUpconfig
+);
     
     reg[1:0] currentState,nextState;
     reg[3:0]count;

@@ -27,12 +27,12 @@ output[7:0] link,output [7:0]lane,output [7:0]id);
 	detectActive = 3'd1,
 	pollingActive= 3'd2,
 	pollingConfiguration= 3'd3,
-    configurationLinkWidthStart = 3'd4,
-    configurationLinkWidthAccept = 3'd5,
-    configurationLanenumWait = 3'd6,
-    configurationLanenumAccept = 3'd7,
-    configurationComplete = 3'd8,
-    configurationIdle = 3'd9;
+    	configurationLinkWidthStart = 3'd4,
+    	configurationLinkWidthAccept = 3'd5,
+    	configurationLanenumWait = 3'd6,
+    	configurationLanenumAccept = 3'd7,
+    	configurationComplete = 3'd8,
+    	configurationIdle = 3'd9;
 
 
 //internal states
@@ -88,6 +88,7 @@ begin
 	begin
         resetcounter = 1'b0; countup = 1'b0;
         if(substate == pollingActive) nextState = pollingActive1;
+	else if(substate == pollingConfiguration) nextState = pollingConfiguration1;
         else if (substate == configurationLinkWidthStart && DEVICETYPE == 1'b0)nextState = configLinkWidthStartDown1;
         else if (substate == configurationLinkWidthStart && DEVICETYPE == 1'b1)nextState = configLinkWidthStartUp1;
         else if (substate == configurationLinkWidthAccept && DEVICETYPE == 1'b1)nextState = configLinkWidthAcceptUp1;
@@ -104,7 +105,11 @@ begin
         resetcounter = 1'b0; countup = 1'b0;
         if((valid && orderedset[15:8]==PAD && orderedset[23:16]==PAD && orderedset[43] == 1'b0 && orderedset[87:80] == TS1)||
         (valid && orderedset[15:8]==PAD && orderedset[23:16]==PAD && orderedset[87:80] == TS2)||
-        (valid && orderedset[15:8]==PAD && orderedset[23:16]==PAD && orderedset[42] == 1'b1 && orderedset[87:80] == TS1)) nextState = pollingActive2;
+        (valid && orderedset[15:8]==PAD && orderedset[23:16]==PAD && orderedset[42] == 1'b1 && orderedset[87:80] == TS1)) 
+	begin
+	nextState = pollingActive2;
+	resetcounter = 1'b1; countup = 1'b1;
+	end
         else nextState = pollingActive1;
 end
     pollingActive2:
@@ -126,8 +131,12 @@ end
     pollingConfiguration1:
 begin
         resetcounter = 1'b0; countup = 1'b0;
-        if(valid && orderedset[15:8]==PAD && orderedset[23:16]==PAD && orderedset[87:80] == TS2)nextState = pollingConfiguration2;
-        else nextState = pollingConfiguration1;
+        if(valid && orderedset[15:8]==PAD && orderedset[23:16]==PAD && orderedset[87:80] == TS2)
+	begin
+	nextState = pollingConfiguration2;
+        resetcounter = 1'b1; countup = 1'b1;
+	end
+	else nextState = pollingConfiguration1;
 end
     pollingConfiguration2:
 begin
@@ -147,7 +156,11 @@ end
     configLinkWidthStartDown1:
 begin
         resetcounter = 1'b0; countup = 1'b0;
-        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==PAD && orderedset[87:80] == TS1)nextState =  configLinkWidthStartDown2;
+        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==PAD && orderedset[87:80] == TS1)
+	begin
+	nextState =  configLinkWidthStartDown2;
+        resetcounter = 1'b1; countup = 1'b1;
+	end
         else nextState = configLinkWidthStartDown1;
 end
     configLinkWidthStartDown2:
@@ -167,7 +180,11 @@ end
     configLinkWidthStartUp1:
 begin
         resetcounter = 1'b0; countup = 1'b0;
-        if(valid && orderedset[15:8]!=PAD && orderedset[23:16]==PAD && orderedset[87:80] == TS1)nextState =  configLinkWidthStartUp2;
+        if(valid && orderedset[15:8]!=PAD && orderedset[23:16]==PAD && orderedset[87:80] == TS1)
+	begin
+	nextState =  configLinkWidthStartUp2;
+	resetcounter = 1'b1; countup = 1'b1;
+	end
         else nextState = configLinkWidthStartUp1;
 end
     configLinkWidthStartUp2:
@@ -188,7 +205,11 @@ end
     configLinkWidthAcceptUp1:
 begin
         resetcounter = 1'b0; countup = 1'b0;
-        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]!=PAD  && orderedset[87:80] == TS1)nextState = configLinkWidthAcceptUp2;
+        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]!=PAD  && orderedset[87:80] == TS1)
+	begin
+	nextState = configLinkWidthAcceptUp2;
+	resetcounter = 1'b1; countup = 1'b1;
+	end
         else nextState = configLinkWidthAcceptUp1;
 end    
     configLinkWidthAcceptUp2:
@@ -209,7 +230,11 @@ end
     configLanenumWaitDown1:
 begin
        resetcounter = 1'b0; countup = 1'b0;
-        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==laneNumber && orderedset[87:80] == TS1)nextState = configLanenumWaitDown2;
+        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==laneNumber && orderedset[87:80] == TS1)
+	begin
+	nextState = configLanenumWaitDown2;
+	resetcounter = 1'b1; countup = 1'b1;
+	end
         else nextState = configLanenumWaitDown1;
 end
     configLanenumWaitDown2:
@@ -229,8 +254,12 @@ end
     configLanenumWaitUp1:
 begin
         resetcounter = 1'b0; countup = 1'b0;
-        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==laneNumber && orderedset[87:80] == TS2)nextState = configLanenumWaitUp2;
-        else nextState = configLanenumWaitUp1;
+        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==laneNumber && orderedset[87:80] == TS2)
+	begin
+	nextState = configLanenumWaitUp2;
+        resetcounter = 1'b1; countup = 1'b1;
+	end
+	else nextState = configLanenumWaitUp1;
 end
     configLanenumWaitUp2:
 begin
@@ -250,8 +279,12 @@ end
     configLanenumAcceptDown1:
 begin
         resetcounter = 1'b0; countup = 1'b0;
-        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==laneNumber && orderedset[87:80] == TS1)nextState = configLanenumAcceptDown2;
-        else nextState = configLanenumAcceptDown1;
+        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==laneNumber && orderedset[87:80] == TS1)
+	begin
+	nextState = configLanenumAcceptDown2;
+        resetcounter = 1'b1; countup = 1'b1;
+	end
+	else nextState = configLanenumAcceptDown1;
 end
     configLanenumAcceptDown2:
 begin
@@ -270,7 +303,11 @@ end
     configLanenumAcceptUp1:
 begin
         resetcounter = 1'b0; countup = 1'b0;
-        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==laneNumber && orderedset[87:80] == TS2)nextState = configLanenumAcceptUp2;
+        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==laneNumber && orderedset[87:80] == TS2)
+	begin 
+	nextState = configLanenumAcceptUp2;
+	resetcounter = 1'b1; countup = 1'b1;
+	end
         else nextState = configLanenumAcceptUp1;
 end
     configLanenumAcceptUp2:
@@ -291,8 +328,12 @@ end
     configCompleteDown1:
 begin
         resetcounter = 1'b0; countup = 1'b0;
-        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==laneNumber && orderedset[87:80] == TS2)nextState = configCompleteDown2;
-            else nextState = configCompleteDown1;
+        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==laneNumber && orderedset[87:80] == TS2)
+	begin
+	nextState = configCompleteDown2;
+	resetcounter = 1'b1; countup = 1'b1;
+	end
+        else nextState = configCompleteDown1;
 end
     configCompleteDown2:
 begin
@@ -312,8 +353,12 @@ end
     configCompleteUp1:
 begin
         resetcounter = 1'b0; countup = 1'b0;
-        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==laneNumber && orderedset[87:80] == TS2)nextState = configCompleteUp2;
-            else nextState = configCompleteUp1;
+        if(valid && orderedset[15:8]==linkNumber && orderedset[23:16]==laneNumber && orderedset[87:80] == TS2)
+	begin
+	nextState = configCompleteUp2;
+        resetcounter = 1'b1; countup = 1'b1;
+	end
+	else nextState = configCompleteUp1;
 end
     configCompleteUp2:
 begin
