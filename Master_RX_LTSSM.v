@@ -112,7 +112,7 @@ always @(*)
         counting:
         begin
             resetOsCheckers = {16{1'b1}};
-            if(!timeOut && countersValues >= {64{1'b1}})
+            if(!timeOut && countersValues[4:0] >= 5'd8 && countersValues[9:5] >= 5'd8)
             begin
                 enableTimer = 1'b1;
                 resetTimer = 1'b1;
@@ -122,6 +122,7 @@ always @(*)
             begin
                 nextState = failed;
             end
+	    else nextState = counting;
         end
         success:
         begin

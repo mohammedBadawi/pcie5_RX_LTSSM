@@ -9,7 +9,7 @@ module toptb;
     reg timeOut;
     reg reset;
     wire finish;
-    wire [3:0]exitT;
+    wire [3:0]exitTo;
     wire [15:0]resetOsCheckers;
     wire disableDescrambler;
     //output [3:0]lpifStatus
@@ -27,11 +27,11 @@ module toptb;
     wire upconfigure_capability1;
     wire[4:0]currentState1,nextState1;
     wire [7:0]link1,lane1,id1;
-    wire[7:0]currentcount1;
+    wire[4:0]currentcount1;
     wire upconfigure_capability2;
     wire[4:0]currentState2,nextState2;
     wire [7:0]link2,lane2,id2;
-    wire[7:0]currentcount2;
+    wire[4:0]currentcount2;
 
  localparam [7:0]
     PAD = 8'b11110111, //F7
@@ -56,7 +56,7 @@ masterRxLTSSM  #(16)mymaster(
      clk,
      5'd2,
      substate,
-     {{56{1'b0}},currentcount2,currentcount1}, //4bit*16lanes = 64bits
+     {{70{1'b0}},currentcount2,currentcount1}, //4bit*16lanes = 64bits
      forceDetect,
      rxElectricalIdle,
      timeOut,
@@ -123,7 +123,7 @@ orderedset1 = 128'h25252525252525AAAAF7F7F7; //counter = 1
 orderedset2 = 128'h25252525252525AAAAF7F7F7; //counter = #10
 #10
 valid = 1'b1;
-orderedset1 = 128'h25252525252525AAAAF7F7F7; //counter = 1
+orderedset1 = 128'h25252525252525AAAAAAAAAA; //counter = 1
 orderedset2 = 128'h25252525252525AAAAF7F7F7; //counter = #10
 #10
 valid = 1'b1;
@@ -134,7 +134,14 @@ valid = 1'b1;
 orderedset1 = 128'h25252525252525AAAAF7F7F7; //counter = 1
 orderedset2 = 128'h25252525252525AAAAF7F7F7; //counter = #10
 #10
-reset = 0;
+valid = 1'b1;
+orderedset1 = 128'h25252525252525AAAAF7F7F7; //counter = 1
+orderedset2 = 128'h25252525252525AAAAF7F7F7; //counter = #10
+#10
+valid = 1'b1;
+orderedset1 = 128'h25252525252525AAAAF7F7F7; //counter = 1
+orderedset2 = 128'h25252525252525AAAAF7F7F7; //counter = #10
+
 /*
 #10
 valid = 0;

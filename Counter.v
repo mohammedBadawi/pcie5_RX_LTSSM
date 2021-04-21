@@ -1,4 +1,4 @@
-module counter #(parameter width = 8)(input reset,input clk,input up,output reg [width-1 : 0] count);
+module counter #(parameter width = 5)(input reset,input clk,input up,output reg [width-1 : 0] count);
 
 always @(posedge clk or negedge reset)
 begin
