@@ -2,7 +2,7 @@ module  masterRxLTSSM #(parameter MAXLANES)(
     input clk,
     input [4:0]numberOfDetectedLanes,
     input [3:0]substate,
-    input [63:0]countersValues, //4bit*16lanes = 64bits
+    input [15:0]countersComparators,
     input forceDetect,
     input rxElectricalIdle,
     input timeOut,
@@ -15,14 +15,12 @@ module  masterRxLTSSM #(parameter MAXLANES)(
     output reg [5:0]setTimer,
     output reg enableTimer,
     output reg resetTimer,
-    output reg writeRateId,
-    output reg writeUpconfig);
-
+    output reg[4:0]comparatorsCount);
     
     reg[1:0] currentState,nextState,lastState;
-    reg[3:0]count;
-    reg[5:0]timeToWait;
-
+    reg[5:0] timeToWait;
+    wire[15:0]comparatorsCondition;
+    
 //input substates from main ltssm
     localparam [3:0]
 	detectQuiet =  3'd0,
@@ -69,27 +67,39 @@ module  masterRxLTSSM #(parameter MAXLANES)(
         if(substate != lastState) //ensure that this is a new request
         begin
             resetOsCheckers = {16{1'b1}};
-            if(substate==pollingActive||substate==configurationComplete)
+            if(substate == detectQuiet)
             begin
-                count = 4'd8;
+                comparatorsCount = 5'd0;
+                timeToWait = 6'd12;
+                nextState = counting; 
+            end
+            else if(substate == detectActive)
+            begin
+                comparatorsCount = 5'd0;
+                timeToWait = 6'd0;
+                nextState = counting; 
+            end
+            else if(substate==pollingActive||substate==configurationComplete)
+            begin
+                comparatorsCount = 5'd8;
                 timeToWait = 6'd24;
                 nextState = counting;
             end
             else if (substate==configurationLinkWidthStart||substate==configurationLinkWidthAccept||substate==configurationLanenumAccept)
             begin
-                count = 4'd2;
+                comparatorsCount = 5'd2;
                 timeToWait = 6'd24;
                 nextState = counting;                 
             end
             else if (substate==configurationLanenumWait)
             begin
-                count=4'd2;
+                comparatorsCount=5'd2;
                 timeToWait = 6'd2;
                 nextState = counting;
             end
             else if (substate==pollingConfiguration)
             begin
-                count=4'd8;
+                comparatorsCount=5'd8;
                 timeToWait = 6'd48;
                 nextState = counting;
             end
@@ -98,7 +108,7 @@ module  masterRxLTSSM #(parameter MAXLANES)(
         
         else 
         begin
-            count=4'd0;
+            comparatorsCount=5'd0;
             timeToWait = 6'd0;
             enableTimer = 1'b0;
             resetTimer = 1'b0;
@@ -110,11 +120,13 @@ module  masterRxLTSSM #(parameter MAXLANES)(
         
     counting:
     begin
+        enableTimer = 1'b1;
+        resetTimer  = 1'b1;
         resetOsCheckers = {16{1'b1}};
-        if(!timeOut && countersValues[4:0] >= 5'd8 && countersValues[9:5] >= 5'd8)
+        if(!timeOut && (countersComparators >= comparatorsCondition || (substate == detectQuiet && rxElectricalIdle)))
         begin
-            enableTimer = 1'b1;
-            resetTimer = 1'b1;
+            enableTimer = 1'b0;
+            resetTimer  = 1'b0;
             nextState = success; 
         end
         else if(timeOut)nextState = failed;
@@ -154,6 +166,14 @@ module  masterRxLTSSM #(parameter MAXLANES)(
 
 
 
-
+always@(*)
+begin
+    if(numberOfDetectedLanes==5'd1)       comparatorsCondition = 16'd1;
+    else if(numberOfDetectedLanes == 5'd2)comparatorsCondition = {{14{1'b0}},{2{1'b1}}};
+    else if(numberOfDetectedLanes == 5'd4)comparatorsCondition = {{12{1'b0}},{4{1'b1}}};
+    else if(numberOfDetectedLanes == 5'd8)comparatorsCondition = {{8{1'b0}},{8{1'b1}}};
+    else if(numberOfDetectedLanes == 5'd16)comparatorsCondition= {16{1'b1}};
+    else comparatorsCondition = 16'd0;
+end
 
 endmodule
