@@ -45,85 +45,81 @@ module  masterRxLTSSM #(parameter MAXLANES)(
     failed = 2'b11;
 
     //CURRENT STATE FF
-always @(posedge clk or negedge reset)
-begin
-    if(!reset)
+    always @(posedge clk or negedge reset)
     begin
-	lastState <= start;
-        currentState <= start;
-    end
-    else
-    begin
-        currentState <= nextState;
-    end    
-end
-
-always @(*)
- begin
-     disableDescrambler = 1'b0;
-     writeRateId = 1'b0;
-     writeUpconfig = 1'b0;
-     case(currentState)
-        start:
+        if(!reset)
         begin
-            
-	    if(substate != lastState)
-	    begin
-	    resetOsCheckers = {16{1'b1}};
-            if(substate==pollingActive||substate==configurationComplete)
-                begin
-                    count = 4'd8;
-                    timeToWait = 6'd24;
-                    nextState = counting;
-                end
-            else if (substate==configurationLinkWidthStart||substate==configurationLinkWidthAccept||substate==configurationLanenumAccept)
-                begin
-                    count = 4'd2;
-                    timeToWait = 6'd24;
-                    nextState = counting;                 
-                end
-            else if (substate==configurationLanenumWait)
-                begin
-                        count=4'd2;
-                        timeToWait = 6'd2;
-                        nextState = counting;
-                end
-            else if (substate==pollingConfiguration)
-                begin
-                        count=4'd8;
-                        timeToWait = 6'd48;
-                        nextState = counting;
-                end
-	    lastState = substate;
-	    end
-		
-            else 
-                begin
-                    count=4'd0;
-                    timeToWait = 6'd0;
-		    enableTimer = 1'b0;
-                    resetTimer = 1'b0;
-                    resetOsCheckers = 16'b0;
-                    nextState = start;
-                end
-	
+            lastState <= start;
+            currentState <= start;
         end
-     
-        counting:
+        else
+        begin
+            currentState <= nextState;
+        end    
+    end
+
+    always @(*)
+    begin
+        disableDescrambler = 1'b0;
+        writeRateId = 1'b0;
+        writeUpconfig = 1'b0;
+        case(currentState)
+        start:
+        begin        
+        if(substate != lastState) //ensure that this is a new request
         begin
             resetOsCheckers = {16{1'b1}};
-            if(!timeOut && countersValues[4:0] >= 5'd8 && countersValues[9:5] >= 5'd8)
+            if(substate==pollingActive||substate==configurationComplete)
             begin
-                enableTimer = 1'b1;
-                resetTimer = 1'b1;
-                nextState = success; 
+                count = 4'd8;
+                timeToWait = 6'd24;
+                nextState = counting;
             end
-            else if(timeOut)
+            else if (substate==configurationLinkWidthStart||substate==configurationLinkWidthAccept||substate==configurationLanenumAccept)
             begin
-                nextState = failed;
+                count = 4'd2;
+                timeToWait = 6'd24;
+                nextState = counting;                 
             end
-	    else nextState = counting;
+            else if (substate==configurationLanenumWait)
+            begin
+                count=4'd2;
+                timeToWait = 6'd2;
+                nextState = counting;
+            end
+            else if (substate==pollingConfiguration)
+            begin
+                count=4'd8;
+                timeToWait = 6'd48;
+                nextState = counting;
+            end
+            lastState = substate;
         end
+        
+        else 
+        begin
+            count=4'd0;
+            timeToWait = 6'd0;
+            enableTimer = 1'b0;
+            resetTimer = 1'b0;
+            resetOsCheckers = 16'b0;
+            nextState = start;
+        end
+
+    end
+        
+    counting:
+    begin
+        resetOsCheckers = {16{1'b1}};
+        if(!timeOut && countersValues[4:0] >= 5'd8 && countersValues[9:5] >= 5'd8)
+        begin
+            enableTimer = 1'b1;
+            resetTimer = 1'b1;
+            nextState = success; 
+        end
+        else if(timeOut)nextState = failed;
+        else nextState = counting;
+    end
         success:
         begin
             resetOsCheckers = 16'b0;
@@ -142,18 +138,18 @@ always @(*)
             exitTo = detectQuiet;
             nextState = start;
         end
-     default:
-     begin
+        default:
+        begin
             nextState = start;
             enableTimer = 1'b0;
             resetTimer = 1'b0;
             resetOsCheckers = 16'b0;
-     end
-     
+        end
+        
 
-   
-     endcase
- end
+    
+        endcase
+    end
     
 
 

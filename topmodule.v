@@ -54,7 +54,7 @@ localparam [3:0]
 
 masterRxLTSSM  #(16)mymaster(
      clk,
-     5'd2,
+     5'd2, // detected lanes
      substate,
      {{70{1'b0}},currentcount2,currentcount1}, //4bit*16lanes = 64bits
      forceDetect,
