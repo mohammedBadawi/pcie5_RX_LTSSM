@@ -1,6 +1,6 @@
-module os_checker #(parameter DEVICETYPE)(
+module osChecker #(parameter DEVICETYPE)(
     input clk,
-    input linkNumber,
+    input [7:0]linkNumber,
     input laneNumber,
     input [127:0]orderedset,
     input valid,
@@ -407,7 +407,7 @@ end
 configIdle2:
 begin
     resetcounter = 1'b1; countup = 1'b0;
-    else if(valid)
+    if(valid)
         begin
             if(orderedset[7:0]==8'h00)
             begin

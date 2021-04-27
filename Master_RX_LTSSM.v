@@ -1,4 +1,4 @@
-module  masterRxLTSSM #(parameter MAXLANES)(
+module  masterRxLTSSM #(parameter MAXLANES = 16)(
     input clk,
     input [4:0]numberOfDetectedLanes,
     input [3:0]substate,
@@ -17,9 +17,10 @@ module  masterRxLTSSM #(parameter MAXLANES)(
     output reg resetTimer,
     output reg[4:0]comparatorsCount);
     
-    reg[1:0] currentState,nextState,lastState;
+    reg[3:0] lastState;
+    reg[1:0] currentState,nextState;
     reg[5:0] timeToWait;
-    wire[15:0]comparatorsCondition;
+    reg[15:0]comparatorsCondition;
     
 //input substates from main ltssm
     localparam [3:0]
@@ -47,7 +48,6 @@ module  masterRxLTSSM #(parameter MAXLANES)(
     begin
         if(!reset)
         begin
-            lastState <= start;
             currentState <= start;
         end
         else
@@ -59,8 +59,6 @@ module  masterRxLTSSM #(parameter MAXLANES)(
     always @(*)
     begin
         disableDescrambler = 1'b0;
-        writeRateId = 1'b0;
-        writeUpconfig = 1'b0;
         case(currentState)
         start:
         begin        
@@ -103,7 +101,7 @@ module  masterRxLTSSM #(parameter MAXLANES)(
                 timeToWait = 6'd48;
                 nextState = counting;
             end
-            lastState = substate;
+
         end
         
         else 
@@ -164,7 +162,7 @@ module  masterRxLTSSM #(parameter MAXLANES)(
     end
     
 
-
+always@(substate)lastState = substate;
 
 always@(*)
 begin
