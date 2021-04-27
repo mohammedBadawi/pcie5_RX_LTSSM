@@ -49,7 +49,7 @@ module  masterRxLTSSM #(parameter MAXLANES = 16)(
         if(!reset)
         begin
             currentState <= start;
-	    finish <= 1'b0;
+	        finish <= 1'b0;
         end
         else
         begin
@@ -122,8 +122,8 @@ module  masterRxLTSSM #(parameter MAXLANES = 16)(
         enableTimer = 1'b1;
         resetTimer  = 1'b1;
         resetOsCheckers = {16{1'b1}};
-	finish = 1'b0;
-        if(!timeOut && (countersComparators >= comparatorsCondition || (substate == detectQuiet && rxElectricalIdle)))
+	    finish = 1'b0;
+        if((!timeOut && countersComparators >= comparatorsCondition) || (substate == detectQuiet && rxElectricalIdle) || (substate == detectQuiet && timeOut))
         begin
             enableTimer = 1'b0;
             resetTimer  = 1'b0;
