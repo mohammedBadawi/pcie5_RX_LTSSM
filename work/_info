@@ -10,212 +10,212 @@ z2
 cModel Technology
 dC:/intelFPGA/20.1
 vcomparator
-Z0 !s110 1619484322
+!s110 1619487728
 !i10b 1
 !s100 Hkeo[__DajD5ifVI@NB^N1
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
 I;^NgC2dg=bmIXlZC;Na711
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM
 w1619481653
 8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/comparator.v
 FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/comparator.v
-!i122 468
+!i122 484
 L0 1 3
-Z4 OV;L;2020.1;71
+Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1619484322.000000
+Z4 !s108 1619487727.000000
 !s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/comparator.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/comparator.v|
 !i113 1
-Z6 o-work work
-Z7 tCvgOpt 0
+Z5 o-work work
+Z6 tCvgOpt 0
 vcounter
-Z8 !s110 1619484321
+Z7 !s110 1619487726
 !i10b 1
 !s100 dEGKSDSP3<Nig01=AC;B41
-R1
+R0
 IL9DXF?_[I8JKPgB0Ng[CJ0
+R1
 R2
-R3
-Z9 w1619469735
+Z8 w1619469735
 8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v
 FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v
-!i122 462
+!i122 478
 L0 1 10
-R4
+R3
 r1
 !s85 0
 31
-Z10 !s108 1619484321.000000
+Z9 !s108 1619487726.000000
 !s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Counter.v|
 !i113 1
+R5
 R6
-R7
 vmasterRxLTSSM
-R8
+R7
 !i10b 1
-!s100 `RB_9fzTDCIm_]PEXEclG1
+!s100 mlQdjfAM7?`A>?JAfgfe92
+R0
+I]fgWN6zaVMg36F`@]jbJ]3
 R1
-Il3lZHII3DN<c_R>jelhNh0
 R2
-R3
-w1619484318
+w1619487419
 8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v
 FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v
-!i122 463
-L0 1 177
-R4
+!i122 479
+L0 1 179
+R3
 r1
 !s85 0
 31
-R10
+R9
 !s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v|
 !i113 1
+R5
 R6
-R7
 nmaster@rx@l@t@s@s@m
 vos_checker
 !s110 1619470003
 !i10b 1
 !s100 IS:]h096ETalZH<K^mjjE3
-R1
+R0
 I?lf^d^U8z`chROKDA>;CU0
+R1
 R2
-R3
 w1619469934
-Z11 8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v
-Z12 FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v
+Z10 8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v
+Z11 FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v
 !i122 386
-Z13 L0 1 429
-R4
+Z12 L0 1 429
+R3
 r1
 !s85 0
 31
 !s108 1619470003.000000
-Z14 !s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v|
-Z15 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v|
+Z13 !s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v|
+Z14 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v|
 !i113 1
+R5
 R6
-R7
 vosChecker
-R8
+Z15 !s110 1619487727
 !i10b 1
 !s100 S[eV=PmQA0n?hYmm7<jED0
-R1
+R0
 Il1cNf3>mgYI@2Xf6H0ld20
+R1
 R2
-R3
 w1619480141
+R10
 R11
+!i122 480
 R12
-!i122 464
-R13
-R4
+R3
 r1
 !s85 0
 31
-R10
+R4
+R13
 R14
-R15
 !i113 1
+R5
 R6
-R7
 nos@checker
 vRxLTSSM
-R0
+R15
 !i10b 1
-!s100 ^lR??3XGj6o4P^Z@Q`WZK0
+!s100 5cRVnke<A:L:2ca7;PV[l3
+R0
+InXL0]e=3O^le^gZ]B[2IK2
 R1
-ILHVXjINgBIS?fd5[:6DM>3
 R2
-R3
-w1619483415
+w1619487723
 8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/RxLTSSM.v
 FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/RxLTSSM.v
-!i122 467
-L0 1 83
-R4
+!i122 483
+L0 1 85
+R3
 r1
 !s85 0
 31
-R5
+R4
 !s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/RxLTSSM.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/RxLTSSM.v|
 !i113 1
+R5
 R6
-R7
 n@rx@l@t@s@s@m
 vtb
-R0
+R15
 !i10b 1
 !s100 XN2`oIdn6P>No?1BKDYHH2
-R1
+R0
 IZ`04bj76>_l8W`nUC<DUz3
+R1
 R2
-R3
 w1618947734
 8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v
 FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v
-!i122 465
+!i122 481
 L0 1 113
-R4
+R3
 r1
 !s85 0
 31
-R5
+R4
 !s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v|
 !i113 1
+R5
 R6
-R7
 vtimer
-R8
+R7
 !i10b 1
 !s100 kAzgmTD_^e1k7Nh9UNUNd2
-R1
+R0
 I3OXeOT1O@5`ga`P[3TzZz0
+R1
 R2
-R3
 w1619482240
 8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Timer.v
 FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Timer.v
-!i122 461
+!i122 477
 L0 1 4
-R4
+R3
 r1
 !s85 0
 31
-R10
+R9
 !s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Timer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Timer.v|
 !i113 1
+R5
 R6
-R7
 vtoptb
-R0
+R15
 !i10b 1
 !s100 2XHANlzg>cP7aDEh=A2Oe3
-R1
+R0
 ITQG>a5CS?nJah1AhD4UPP1
+R1
 R2
-R3
-R9
+R8
 8C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/topmodule.v
 FC:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/topmodule.v
-!i122 466
+!i122 482
 L0 1 198
-R4
+R3
 r1
 !s85 0
 31
-R5
+R4
 !s107 C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/topmodule.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/topmodule.v|
 !i113 1
+R5
 R6
-R7

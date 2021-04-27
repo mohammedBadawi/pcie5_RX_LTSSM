@@ -53,7 +53,7 @@ generate
      countersValues[(i*5)+4:i*5]);
 
      comparator comparator(
-     countersValues[(i*5)+4:i*5]
+     countersValues[(i*5)+4:i*5],
      checkValues,
      comparisonValues[i]);
 

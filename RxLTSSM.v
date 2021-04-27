@@ -80,4 +80,6 @@ masterRxLTSSM masterRxLTSSM(
     resetTimers,
     checkValues);
 
+
+assign {witeUpconfigureCapability,writerateid} = (finish &&(exitTo == 3'd4|| exitTo == 3'd9))? 1'b1 : 1'b0;
 endmodule
