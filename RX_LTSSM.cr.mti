@@ -1,30 +1,16 @@
-C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/topmodule.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/topmodule.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module toptb
-
-Top level modules:
-	toptb
-
-} {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Timer.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Timer.v
+C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Timer.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Timer.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module timer
 
 Top level modules:
 	timer
 
-} {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/RxLTSSM.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/RxLTSSM.v
+} {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/topmodule.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/topmodule.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module RxLTSSM
+-- Compiling module toptb
 
 Top level modules:
-	RxLTSSM
-
-} {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module tb
-
-Top level modules:
-	tb
+	toptb
 
 } {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/OS_Checker.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -33,9 +19,24 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	osChecker
 
-} {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v
+} {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/rxltssmTB.v {1 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/rxltssmTB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module rxltssmTB
+
+Top level modules:
+	rxltssmTB
+
+} {} {}} C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v {2 {vlog -work work -stats=none C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module masterRxLTSSM
+** Warning: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/Master_RX_LTSSM.v(67): (vlog-2182) 'lastState' might be read before written in always_comb or always @* block.
 
 Top level modules:
 	masterRxLTSSM

@@ -8,7 +8,7 @@ input [7:0]linkNumber,
 input forceDetect,
 input rxElectricalIdle,
 input validOrderedSets,
-output [7:0] rateid,
+output [7:0] rateId,
 output upConfigureCapability,
 output finish,
 output [3:0]exitTo,
@@ -25,8 +25,8 @@ wire [15:0]upConfigurebits;
 wire [79:0]countersValues;
 wire [4:0] checkValues;
 wire [15:0]comparisonValues;
-wire [15:0]enableTimers,resetTimers,timeOuts;
-wire [95:0]setTimers;
+wire  enableTimer,resetTimer,timeOut;
+wire [5:0]setTimer;
 
 
 genvar i;
@@ -36,14 +36,14 @@ generate
      osChecker #(.DEVICETYPE(DEVICETYPE))osChecker( 
      clk,
      linkNumber,
-     i,
-     orderedSets[(i*16)+15:i*16],
+     i[7:0],
+     orderedSets[(i*128)+127:i*128],
      validOrderedSets,
      substate,
      resetOsCheckers[i],
      countUp[i],
      resetCounters[i],
-     rateid[(i*8)+7:i*8],
+     rateIds[(i*8)+7:i*8],
      upConfigurebits[i]);
 
      counter counter(
@@ -57,7 +57,7 @@ generate
      checkValues,
      comparisonValues[i]);
 
-     timer timer(clk,setTimers[(i*6)+5:i*6],enableTimers[i],resetTimers[i],timeOuts[i]);
+     
    end
 endgenerate
 
@@ -69,15 +69,22 @@ masterRxLTSSM masterRxLTSSM(
     comparisonValues,
     forceDetect,
     rxElectricalIdle,
-    timeOuts,
+    timeOut,
     reset,
     finish,
     exitTo,
     resetOsCheckers,
     disableDescrambler,
-    setTimers,
-    enableTimers,
-    resetTimers,
+    setTimer,
+    enableTimer,
+    resetTimer,
     checkValues);
 
+timer timer(clk,setTime,enableTimer,resetTimer,timeOut);
+
+
+assign writerateid= (finish &&(exitTo == 4'd4|| exitTo == 4'd9))? 1'b1 : 1'b0;
+assign witeUpconfigureCapability=(finish &&(exitTo == 4'd4|| exitTo == 4'd9))? 1'b1 : 1'b0;
+assign {rateId,upConfigureCapability} = {rateIds[7:0],upConfigurebits[0]};
+assign linkUp = (substate == 4'd10)? 1'b1 : 1'b0;
 endmodule

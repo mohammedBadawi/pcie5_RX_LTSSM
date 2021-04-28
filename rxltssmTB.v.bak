@@ -109,11 +109,6 @@ substate = configurationComplete;//8 CONSEC TS2 WITH LINK = LINK# AND LANE = LAN
 #10
 orderedSets[127:0] =   128'h252525252525252525252AAAAA00BBF7;
 orderedSets[255:128] = 128'h252525252525252525252AAAAA01BBF7;
-#110
-substate = configurationIdle;//8 CONSEC TS2 WITH LINK = LINK# AND LANE = LANE#
-#10
-orderedSets[127:0] =   128'h00;
-orderedSets[255:128] = 128'h00;
 end
 
 

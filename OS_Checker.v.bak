@@ -1,4 +1,4 @@
-module osChecker #(parameter DEVICETYPE)(
+module osChecker #(parameter DEVICETYPE = 0)(
     input clk,
     input [7:0]linkNumber,
     input laneNumber,
@@ -9,18 +9,17 @@ module osChecker #(parameter DEVICETYPE)(
     output reg countup,
     output reg resetcounter,
     output [7:0] rateid,
-    output upconfigure_capability,
-    output reg [4:0] currentState,
-    output reg [4:0]  nextState,
-output[7:0] link,output [7:0]lane,output [7:0]id);
+    output upconfigure_capability);
+
     //LOCLA VARIABLES
-   // reg[4:0] currentState,nextState;
+    reg[4:0] currentState,nextState;
     reg[127:0] localorderedset;
     reg notEqual;
     localparam [7:0]
     PAD = 8'b11110111, //F7
     TS1 = 8'b00101010,	//2A
     TS2 = 8'b0100101;  //25
+
 //input substates from main ltssm
     localparam [3:0]
 	detectQuiet =  4'd0,

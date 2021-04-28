@@ -24,16 +24,16 @@ module  masterRxLTSSM #(parameter MAXLANES = 16)(
     
 //input substates from main ltssm
     localparam [3:0]
-	detectQuiet =  3'd0,
-	detectActive = 3'd1,
-	pollingActive= 3'd2,
-	pollingConfiguration= 3'd3,
-    configurationLinkWidthStart = 3'd4,
-    configurationLinkWidthAccept = 3'd5,
-    configurationLanenumWait = 3'd6,
-    configurationLanenumAccept = 3'd7,
-    configurationComplete = 3'd8,
-    configurationIdle = 3'd9;
+	detectQuiet =  4'd0,
+	detectActive = 4'd1,
+	pollingActive= 4'd2,
+	pollingConfiguration= 4'd3,
+    configurationLinkWidthStart = 4'd4,
+    configurationLinkWidthAccept = 4'd5,
+    configurationLanenumWait = 4'd6,
+    configurationLanenumAccept = 4'd7,
+    configurationComplete =4'd8,
+    configurationIdle = 4'd9;
     
 
 //local states
@@ -49,7 +49,8 @@ module  masterRxLTSSM #(parameter MAXLANES = 16)(
         if(!reset)
         begin
             currentState <= start;
-	    finish <= 1'b0;
+	        finish <= 1'b0;
+		lastState<=4'hF;
         end
         else
         begin
@@ -63,46 +64,52 @@ module  masterRxLTSSM #(parameter MAXLANES = 16)(
         case(currentState)
         start:
         begin        
-        if(substate != lastState) //ensure that this is a new request
-        begin
+         if(substate != lastState) //ensure that this is a new request
+         begin
             resetOsCheckers = {16{1'b1}};
             if(substate == detectQuiet)
             begin
                 comparatorsCount = 5'd0;
                 timeToWait = 6'd12;
-                nextState = counting; 
+                nextState = counting;
+		 
             end
             else if(substate == detectActive)
             begin
                 comparatorsCount = 5'd0;
                 timeToWait = 6'd0;
-                nextState = counting; 
+                nextState = counting;
+		
             end
             else if(substate==pollingActive||substate==configurationComplete)
             begin
                 comparatorsCount = 5'd8;
                 timeToWait = 6'd24;
                 nextState = counting;
+		
             end
             else if (substate==configurationLinkWidthStart||substate==configurationLinkWidthAccept||substate==configurationLanenumAccept)
             begin
                 comparatorsCount = 5'd2;
                 timeToWait = 6'd24;
-                nextState = counting;                 
+                nextState = counting;
+		                
             end
             else if (substate==configurationLanenumWait)
             begin
                 comparatorsCount=5'd2;
                 timeToWait = 6'd2;
                 nextState = counting;
+		
             end
             else if (substate==pollingConfiguration)
             begin
                 comparatorsCount=5'd8;
                 timeToWait = 6'd48;
                 nextState = counting;
+		
             end
-
+		
         end
         
         else 
@@ -123,17 +130,22 @@ module  masterRxLTSSM #(parameter MAXLANES = 16)(
         resetTimer  = 1'b1;
         resetOsCheckers = {16{1'b1}};
 	finish = 1'b0;
-        if(!timeOut && (countersComparators >= comparatorsCondition || (substate == detectQuiet && rxElectricalIdle)))
+        if((!timeOut && countersComparators >= comparatorsCondition) || (substate == detectQuiet && rxElectricalIdle) || (substate == detectQuiet && timeOut))
         begin
             enableTimer = 1'b0;
             resetTimer  = 1'b0;
-            nextState = success; 
+            nextState = success;
+           
         end
-        else if(timeOut)nextState = failed;
+        else if(timeOut)
+	begin
+	nextState = failed;
+	end	
         else nextState = counting;
     end
         success:
         begin
+	    lastState = substate;
             resetOsCheckers = 16'b0;
             enableTimer = 1'b0;
             resetTimer = 1'b0;
@@ -143,6 +155,7 @@ module  masterRxLTSSM #(parameter MAXLANES = 16)(
         end
         failed:
         begin
+            lastState = substate;
             resetOsCheckers = 16'b0;
             enableTimer = 1'b0;
             resetTimer = 1'b0;
@@ -164,7 +177,6 @@ module  masterRxLTSSM #(parameter MAXLANES = 16)(
     end
     
 
-always@(substate)lastState = substate;
 
 always@(*)
 begin
