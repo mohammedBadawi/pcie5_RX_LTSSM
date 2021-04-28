@@ -1,6 +1,7 @@
 module rxltssmTB;
 reg clk;
 reg reset;
+reg gen;
 reg [2047:0] orderedSets;
 reg [4:0]numberOfDetectedLanes;
 reg [3:0]substate;
@@ -34,6 +35,7 @@ wire disableDescrambler;
 RxLTSSM #(0) rxltssm(
  clk,
  reset,
+ gen,
  orderedSets,
  numberOfDetectedLanes,
  substate,
@@ -61,6 +63,7 @@ initial
 begin
 clk = 0;
 reset = 0;
+gen = 3'd1;
 #8
 reset = 1;
 substate = detectQuiet; //DETECET ELEC IDLE EXIT FROM THE OTHER DEVICE OR 12MS TIMEOUT
@@ -109,6 +112,11 @@ substate = configurationComplete;//8 CONSEC TS2 WITH LINK = LINK# AND LANE = LAN
 #10
 orderedSets[127:0] =   128'h252525252525252525252AAAAA00BBF7;
 orderedSets[255:128] = 128'h252525252525252525252AAAAA01BBF7;
+#110
+substate = configurationIdle;//8 CONSEC TS2 WITH LINK = LINK# AND LANE = LANE#
+#10
+orderedSets[127:0] =   128'h00;
+orderedSets[255:128] = 128'h00;
 end
 
 

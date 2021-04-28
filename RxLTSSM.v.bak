@@ -1,6 +1,7 @@
 module RxLTSSM #(parameter DEVICETYPE=0) (
 input clk,
 input reset,
+input [2:0]gen,
 input [2047:0] orderedSets,
 input [4:0]numberOfDetectedLanes,
 input [3:0]substate,
@@ -25,8 +26,8 @@ wire [15:0]upConfigurebits;
 wire [79:0]countersValues;
 wire [4:0] checkValues;
 wire [15:0]comparisonValues;
-wire  enableTimer,resetTimer,timeOut;
-wire [5:0]setTimer;
+wire  enableTimer,resetTimer,startTimer,timeOut;
+wire [2:0]setTimer;
 
 
 genvar i;
@@ -78,9 +79,25 @@ masterRxLTSSM masterRxLTSSM(
     setTimer,
     enableTimer,
     resetTimer,
+    startTimer,
     checkValues);
 
-timer timer(clk,setTime,enableTimer,resetTimer,timeOut);
+Timer #(
+ .Width(32),
+ .GEN1_PIPEWIDTH(8) ,	
+ .GEN2_PIPEWIDTH(8) ,	
+ .GEN3_PIPEWIDTH(8) ,	
+ .GEN4_PIPEWIDTH(8) ,	
+ .GEN5_PIPEWIDTH(8)) timer 
+(
+gen,
+resetTimer,
+clk,
+enableTimer,
+startTimer,
+setTimer, //001 -> 12ms //010 -> 24ms // 011 -> 48ms //100 2ms
+timeOut
+);
 
 
 assign writerateid= (finish &&(exitTo == 4'd4|| exitTo == 4'd9))? 1'b1 : 1'b0;

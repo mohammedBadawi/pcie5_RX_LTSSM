@@ -1,7 +1,7 @@
 module osChecker #(parameter DEVICETYPE = 0)(
     input clk,
     input [7:0]linkNumber,
-    input laneNumber,
+    input [7:0]laneNumber,
     input [127:0]orderedset,
     input valid,
     input [3:0]substate,
