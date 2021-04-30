@@ -7,16 +7,333 @@
 # Compile of RxLTSSM.v was successful.
 # Compile of comparator.v was successful.
 # Compile of rxltssmTB.v was successful.
-# 9 compiles, 0 failed with no errors.
-vsim -gui work.rxltssmTB
-# vsim -gui work.rxltssmTB 
-# Start time: 14:49:07 on Apr 28,2021
-# Loading work.rxltssmTB
-# Loading work.RxLTSSM
-# Loading work.masterRxLTSSM
-# Loading work.timer
-# Loading work.osChecker
-# Loading work.counter
-# Loading work.comparator
-add wave sim:/rxltssmTB/*
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.osDecoderTB
+# vsim -gui work.osDecoderTB 
+# Start time: 02:12:35 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave sim:/osDecoderTB/*
+add wave -position end  sim:/osDecoderTB/os/orderedSets
+add wave -position end  sim:/osDecoderTB/os/found
+add wave -position end  sim:/osDecoderTB/os/capacity
+run
+quit -sim
+# End time: 02:18:23 on Apr 30,2021, Elapsed time: 0:05:48
+# Errors: 0, Warnings: 3
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v failed with 14 errors.
+# 10 compiles, 1 failed with 14 errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.osDecoderTB
+# vsim -gui work.osDecoderTB 
+# Start time: 02:29:23 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave sim:/osDecoderTB/*
+add wave -position end  sim:/osDecoderTB/os/capacity
+add wave -position end  sim:/osDecoderTB/os/orderedSets
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.osDecoderTB
+# End time: 02:40:45 on Apr 30,2021, Elapsed time: 0:11:22
+# Errors: 0, Warnings: 5
+# vsim -gui work.osDecoderTB 
+# Start time: 02:40:45 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave sim:/osDecoderTB/*
+add wave -position end  sim:/osDecoderTB/os/numberOfDetectedLanes
+add wave -position end  sim:/osDecoderTB/os/orderedSets
+add wave -position end  sim:/osDecoderTB/os/capacity
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+# Break key hit
+# Break in Module osDecoder at C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v line 34
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.osDecoderTB
+# End time: 02:42:05 on Apr 30,2021, Elapsed time: 0:01:20
+# Errors: 0, Warnings: 3
+# vsim -gui work.osDecoderTB 
+# Start time: 02:42:05 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave sim:/osDecoderTB/*
+run
+add wave -position end  sim:/osDecoderTB/os/orderedSets
+restart
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.osDecoderTB
+# End time: 02:45:47 on Apr 30,2021, Elapsed time: 0:03:42
+# Errors: 0, Warnings: 3
+# vsim -gui work.osDecoderTB 
+# Start time: 02:45:47 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave sim:/osDecoderTB/*
+add wave -position end  sim:/osDecoderTB/os/orderedSets
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.osDecoderTB
+# End time: 02:51:00 on Apr 30,2021, Elapsed time: 0:05:13
+# Errors: 0, Warnings: 2
+# vsim -gui work.osDecoderTB 
+# Start time: 02:51:00 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave sim:/osDecoderTB/*
+add wave -position end  sim:/osDecoderTB/os/orderedSets
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.osDecoderTB
+# End time: 02:52:44 on Apr 30,2021, Elapsed time: 0:01:44
+# Errors: 0, Warnings: 2
+# vsim -gui work.osDecoderTB 
+# Start time: 02:52:44 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave sim:/osDecoderTB/*
+add wave -position end  sim:/osDecoderTB/os/orderedSets
+run
+quit -sim
+# End time: 03:25:46 on Apr 30,2021, Elapsed time: 0:33:02
+# Errors: 0, Warnings: 1
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v failed with 1 errors.
+# 10 compiles, 1 failed with 1 error.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v failed with 1 errors.
+# 10 compiles, 1 failed with 1 error.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.osDecoderTB
+# vsim -gui work.osDecoderTB 
+# Start time: 03:39:00 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'os'.  Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /osDecoderTB/os File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'gen'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /osDecoderTB/os File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (5) for port 'reset'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /osDecoderTB/os File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (512) for port 'numberOfDetectedLanes'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /osDecoderTB/os File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (512) does not match connection size (1) for port 'data'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /osDecoderTB/os File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v Line: 98
+# ** Warning: (vsim-3722) C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v(98): [TFMPC] - Missing connection for port 'linkUp'.
+add wave sim:/osDecoderTB/*
+add wave -position end  sim:/osDecoderTB/os/orderedSets
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.osDecoderTB
+# End time: 03:41:34 on Apr 30,2021, Elapsed time: 0:02:34
+# Errors: 0, Warnings: 11
+# vsim -gui work.osDecoderTB 
+# Start time: 03:41:34 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'os'.  Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /osDecoderTB/os File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'gen'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /osDecoderTB/os File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (5) for port 'reset'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /osDecoderTB/os File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (512) for port 'numberOfDetectedLanes'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /osDecoderTB/os File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (512) does not match connection size (1) for port 'data'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /osDecoderTB/os File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v Line: 98
+# ** Warning: (vsim-3722) C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v(98): [TFMPC] - Missing connection for port 'linkUp'.
+add wave sim:/osDecoderTB/*
+add wave -position end  sim:/osDecoderTB/os/orderedSets
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.osDecoderTB
+# End time: 04:16:33 on Apr 30,2021, Elapsed time: 0:34:59
+# Errors: 0, Warnings: 8
+# vsim -gui work.osDecoderTB 
+# Start time: 04:16:34 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave sim:/osDecoderTB/*
+add wave -position end  sim:/osDecoderTB/os/orderedSets
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.osDecoderTB
+# End time: 04:18:13 on Apr 30,2021, Elapsed time: 0:01:39
+# Errors: 0, Warnings: 2
+# vsim -gui work.osDecoderTB 
+# Start time: 04:18:13 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave sim:/osDecoderTB/*
+add wave -position end  sim:/osDecoderTB/os/orderedSets
 run
