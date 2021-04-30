@@ -44,8 +44,9 @@ begin
 	if(data[i+:8]==COM &&!found/*||data[i+:8]==gen3TS1||data[i+:8]==gen3TS2||data[i+:8]==gen3SKIP*/)
 	begin
 	found = 1'b1;
+	out = orderedSets|data<<capacity;
 	orderedSets = data>>i-((numberOfDetectedLanes-1)<<3);
-	capacity = width-i;
+	capacity = 128-i;
 	end
 
 	if(!found)
@@ -118,7 +119,7 @@ reset = 1;
 #10
 data = 128'hBBBCBCBBBBBBBBBBBBBBBBBBBCBCBCBC;
 #10
-data =       128'hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;
+data =       128'hAAAAAABCBCAAAAAAAAAAAAAAAAAAAAAA;
 #10
 data = 512'd0;
 #10
