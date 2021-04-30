@@ -1,193 +1,8 @@
-# Compile of Timer.v was successful.
-# Compile of Counter.v was successful.
-# Compile of Master_RX_LTSSM.v was successful with warnings.
-# Compile of OS_Checker.v was successful.
-# Compile of tb.v was successful.
-# Compile of topmodule.v was successful.
-# Compile of RxLTSSM.v was successful.
-# Compile of comparator.v was successful.
-# Compile of rxltssmTB.v was successful.
-# Compile of osDecoder.v was successful.
-# 10 compiles, 0 failed with no errors.
-# Compile of Timer.v was successful.
-# Compile of Counter.v was successful.
-# Compile of Master_RX_LTSSM.v was successful with warnings.
-# Compile of OS_Checker.v was successful.
-# Compile of tb.v was successful.
-# Compile of topmodule.v was successful.
-# Compile of RxLTSSM.v was successful.
-# Compile of comparator.v was successful.
-# Compile of rxltssmTB.v was successful.
-# Compile of osDecoder.v was successful.
-# 10 compiles, 0 failed with no errors.
-vsim -gui work.osDecoderTB
-# vsim -gui work.osDecoderTB 
-# Start time: 12:18:43 on Apr 30,2021
-# Loading work.osDecoderTB
-# Loading work.osDecoder
-add wave sim:/osDecoderTB/*
-add wave -position end  sim:/osDecoderTB/os/data
-add wave -position end  sim:/osDecoderTB/os/orderedSets
-add wave -position end  sim:/osDecoderTB/os/out
-add wave -position end  sim:/osDecoderTB/os/valid
-add wave -position end  sim:/osDecoderTB/os/capacity
-run
-# Compile of Timer.v was successful.
-# Compile of Counter.v was successful.
-# Compile of Master_RX_LTSSM.v was successful with warnings.
-# Compile of OS_Checker.v was successful.
-# Compile of tb.v was successful.
-# Compile of topmodule.v was successful.
-# Compile of RxLTSSM.v was successful.
-# Compile of comparator.v was successful.
-# Compile of rxltssmTB.v was successful.
-# Compile of osDecoder.v was successful.
-# 10 compiles, 0 failed with no errors.
-vsim -gui work.osDecoderTB
-# End time: 12:21:17 on Apr 30,2021, Elapsed time: 0:02:34
-# Errors: 0, Warnings: 4
-# vsim -gui work.osDecoderTB 
-# Start time: 12:21:17 on Apr 30,2021
-# Loading work.osDecoderTB
-# Loading work.osDecoder
-add wave sim:/osDecoderTB/*
-add wave -position end  sim:/osDecoderTB/os/valid
-run
-# Compile of Timer.v was successful.
-# Compile of Counter.v was successful.
-# Compile of Master_RX_LTSSM.v was successful with warnings.
-# Compile of OS_Checker.v was successful.
-# Compile of tb.v was successful.
-# Compile of topmodule.v was successful.
-# Compile of RxLTSSM.v was successful.
-# Compile of comparator.v was successful.
-# Compile of rxltssmTB.v was successful.
-# Compile of osDecoder.v was successful.
-# 10 compiles, 0 failed with no errors.
-vsim -gui work.osDecoderTB
-# End time: 12:22:30 on Apr 30,2021, Elapsed time: 0:01:13
-# Errors: 0, Warnings: 2
-# vsim -gui work.osDecoderTB 
-# Start time: 12:22:30 on Apr 30,2021
-# Loading work.osDecoderTB
-# Loading work.osDecoder
-add wave sim:/osDecoderTB/*
-add wave -position end  sim:/osDecoderTB/os/valid
-add wave -position end  sim:/osDecoderTB/os/out
-add wave -position end  sim:/osDecoderTB/os/orderedSets
-add wave -position end  sim:/osDecoderTB/os/data
-add wave -position end  sim:/osDecoderTB/os/capacity
-run
-# Compile of Timer.v was successful.
-# Compile of Counter.v was successful.
-# Compile of Master_RX_LTSSM.v was successful with warnings.
-# Compile of OS_Checker.v was successful.
-# Compile of tb.v was successful.
-# Compile of topmodule.v was successful.
-# Compile of RxLTSSM.v was successful.
-# Compile of comparator.v was successful.
-# Compile of rxltssmTB.v was successful.
-# Compile of osDecoder.v was successful.
-# 10 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.osDecoderTB
-# Loading work.osDecoder
-run
-# Compile of Timer.v was successful.
-# Compile of Counter.v was successful.
-# Compile of Master_RX_LTSSM.v was successful with warnings.
-# Compile of OS_Checker.v was successful.
-# Compile of tb.v was successful.
-# Compile of topmodule.v was successful.
-# Compile of RxLTSSM.v was successful.
-# Compile of comparator.v was successful.
-# Compile of rxltssmTB.v was successful.
-# Compile of osDecoder.v was successful.
-# 10 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.osDecoderTB
-# Loading work.osDecoder
-run
-# Compile of Timer.v was successful.
-# Compile of Counter.v was successful.
-# Compile of Master_RX_LTSSM.v was successful with warnings.
-# Compile of OS_Checker.v was successful.
-# Compile of tb.v was successful.
-# Compile of topmodule.v was successful.
-# Compile of RxLTSSM.v was successful.
-# Compile of comparator.v was successful.
-# Compile of rxltssmTB.v was successful.
-# Compile of osDecoder.v failed with 15 errors.
-# 10 compiles, 1 failed with 15 errors.
-restart
-# Compile of Timer.v was successful.
-# Compile of Counter.v was successful.
-# Compile of Master_RX_LTSSM.v was successful with warnings.
-# Compile of OS_Checker.v was successful.
-# Compile of tb.v was successful.
-# Compile of topmodule.v was successful.
-# Compile of RxLTSSM.v was successful.
-# Compile of comparator.v was successful.
-# Compile of rxltssmTB.v was successful.
-# Compile of osDecoder.v was successful.
-# 10 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.osDecoderTB
-# Loading work.osDecoder
-run
-add wave -position end  sim:/osDecoderTB/os/found
-restart
-run
-# Compile of Timer.v was successful.
-# Compile of Counter.v was successful.
-# Compile of Master_RX_LTSSM.v was successful with warnings.
-# Compile of OS_Checker.v was successful.
-# Compile of tb.v was successful.
-# Compile of topmodule.v was successful.
-# Compile of RxLTSSM.v was successful.
-# Compile of comparator.v was successful.
-# Compile of rxltssmTB.v was successful.
 # Compile of osDecoder.v failed with 1 errors.
-# 10 compiles, 1 failed with 1 error.
-# Compile of osDecoder.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.osDecoderTB
-# Loading work.osDecoder
-run
-# Compile of osDecoder.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.osDecoderTB
-# Loading work.osDecoder
-run
-# Compile of osDecoder.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.osDecoderTB
-# Loading work.osDecoder
-run
-# Compile of osDecoder.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.osDecoderTB
-# Loading work.osDecoder
-run
-# Compile of osDecoder.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.osDecoderTB
-# Loading work.osDecoder
-run
-# Compile of osDecoder.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.osDecoderTB
-# Loading work.osDecoder
-run
+# Compile of osDecoder.v failed with 2 errors.
+# Compile of osDecoder.v failed with 1 errors.
+# Compile of osDecoder.v failed with 2 errors.
+# Compile of osDecoder.v failed with 2 errors.
 # Compile of Timer.v was successful.
 # Compile of Counter.v was successful.
 # Compile of Master_RX_LTSSM.v was successful with warnings.
@@ -197,8 +12,41 @@ run
 # Compile of RxLTSSM.v was successful.
 # Compile of comparator.v was successful.
 # Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v failed with 2 errors.
+# 10 compiles, 1 failed with 2 errors.
+# Compile of osDecoder.v failed with 1 errors.
+# Compile of osDecoder.v failed with 1 errors.
+# Compile of osDecoder.v was successful with warnings.
 # Compile of osDecoder.v was successful.
-# 10 compiles, 0 failed with no errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v failed with 2 errors.
+# 10 compiles, 1 failed with 2 errors.
+vsim -gui work.osDecoderTB
+# vsim -gui work.osDecoderTB 
+# Start time: 20:22:40 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'os'.  Expected 9, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /osDecoderTB/os File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v Line: 141
+# ** Warning: (vsim-3722) C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v(141): [TFMPC] - Missing connection for port 'valid'.
+# ** Warning: (vsim-3722) C:/Users/Memad/OneDrive/Desktop/PCIe/RX_LTSSM/osDecoder.v(141): [TFMPC] - Missing connection for port 'outOs'.
+add wave sim:/osDecoderTB/*
+add wave -position end  sim:/osDecoderTB/os/data
+add wave -position end  sim:/osDecoderTB/os/valid
+add wave -position end  sim:/osDecoderTB/os/outOs
+add wave -position 6  sim:/osDecoderTB/os/orderedSets
+add wave -position 7  sim:/osDecoderTB/os/capacity
+run
+# Compile of osDecoder.v failed with 2 errors.
+# Compile of osDecoder.v was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.osDecoderTB
@@ -210,7 +58,6 @@ restart
 # Loading work.osDecoderTB
 # Loading work.osDecoder
 run
-# Compile of osDecoder.v failed with 8 errors.
 # Compile of osDecoder.v was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
@@ -229,5 +76,158 @@ restart
 # Loading work.osDecoderTB
 # Loading work.osDecoder
 run
-# End time: 13:34:16 on Apr 30,2021, Elapsed time: 1:11:46
+add wave -position end  sim:/osDecoderTB/os/lane_iter
+add wave -position end  sim:/osDecoderTB/os/index_iter
+restart
+run
+add wave -position end  sim:/osDecoderTB/outOs
+restart
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+vsim -gui work.osDecoderTB
+# End time: 20:40:50 on Apr 30,2021, Elapsed time: 0:18:10
 # Errors: 0, Warnings: 1
+# vsim -gui work.osDecoderTB 
+# Start time: 20:40:50 on Apr 30,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave sim:/osDecoderTB/*
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+add wave -position end  sim:/osDecoderTB/os/out
+restart
+run
+# Compile of osDecoder.v was successful with warnings.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v was successful.
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave -position end  sim:/osDecoderTB/os/test
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+# Warning in wave window restart: (vish-4014) No objects found matching '/osDecoderTB/os/test'. 
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v failed with 2 errors.
+# Compile of osDecoder.v failed with 2 errors.
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave -position end  sim:/osDecoderTB/os/test1
+add wave -position end  sim:/osDecoderTB/os/test2
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v failed with 2 errors.
+# Compile of osDecoder.v failed with 2 errors.
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v failed with 1 errors.
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v was successful.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of osDecoder.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
