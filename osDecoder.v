@@ -58,7 +58,7 @@ begin
 	if(data[i+:8]==COM &&!found/*||data[i+:8]==gen3TS1||data[i+:8]==gen3TS2||data[i+:8]==gen3SKIP*/)
 	begin
 	found = 1'b1;
-	if(capacity+i-((numberOfDetectedLanes-1)<<3) >= 128<<numberOfShifts)
+	if(capacity+i-((numberOfDetectedLanes-1)<<3) >= 128<<numberOfShifts || capacity+i-((numberOfDetectedLanes-1)<<3) >= 32<<numberOfShifts /*for skip*/)
 	begin
 	valid = 1'b1;
 	out = orderedSets|(data)<<capacity;
@@ -67,7 +67,6 @@ begin
 	capacity = width-i+((numberOfDetectedLanes-1)<<3);
 	end
 
-	
 end
 	if(!found)
 	begin
@@ -160,9 +159,11 @@ numberOfDetectedLanes = 5'd2;
 #8
 reset = 1;
 #10
-data = 128'hAABBAABBAABBAABBAABBAABBAABBBCBC;
+data = 128'hAABBAABBBCBC00000000000000000000;
 #10
 data = 128'hAABBAABBAABBAABBAABBAABBAABBAABB;
+#10
+data = 128'h000000000000AABBAABBAABBBCBCAABB;
 #10
 data = 512'd0;
 #10

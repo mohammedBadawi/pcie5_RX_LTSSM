@@ -21,7 +21,7 @@ module  masterRxLTSSM #(parameter MAXLANES = 16)(
     reg[1:0] currentState,nextState;
     reg[5:0] timeToWait;
     reg[15:0]comparatorsCondition;
-    
+    reg forcedetectflag;
 //input substates from main ltssm
     localparam [3:0]
 	detectQuiet =  4'd0,
@@ -44,17 +44,25 @@ module  masterRxLTSSM #(parameter MAXLANES = 16)(
     failed = 2'b11;
 
     //CURRENT STATE FF
-    always @(posedge clk or negedge reset)
+    always @(posedge clk or negedge reset or posedge forceDetect)
     begin
         if(!reset)
         begin
-            currentState <= start;
+            	currentState <= start;
 	        finish <= 1'b0;
 		lastState<=4'hF;
+		forcedetectflag<=1'b0;
         end
         else
         begin
-            currentState <= nextState;
+		if(forceDetect) //got to detectquiet
+		begin
+               		comparatorsCount <= 5'd0;
+                	timeToWait <= 6'd12;
+               	 	currentState <= counting;
+			forcedetectflag <=1'b1;
+		end
+           	else currentState <= nextState;
         end    
     end
 
@@ -63,7 +71,8 @@ module  masterRxLTSSM #(parameter MAXLANES = 16)(
         disableDescrambler = 1'b0;
         case(currentState)
         start:
-        begin        
+        begin
+	 forcedetectflag = 1'b0;        
          if(substate != lastState) //ensure that this is a new request
          begin
             resetOsCheckers = {16{1'b1}};
@@ -157,7 +166,7 @@ module  masterRxLTSSM #(parameter MAXLANES = 16)(
             enableTimer = 1'b0;
             resetTimer = 1'b0;
             finish = 1'b1;
-            exitTo = substate + 1'b1;
+            exitTo =  forcedetectflag? detectActive : substate + 1'b1;
             nextState = start;
         end
         failed:

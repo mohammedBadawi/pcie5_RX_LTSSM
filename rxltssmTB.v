@@ -77,6 +77,13 @@ validOrderedSets = 1'b1;
 orderedSets[127:0] =   128'h2525252525252525252525AAAAF7F7F7;
 orderedSets[255:128] = 128'h2525252525252525252525AAAAF7F7F7;
 #110
+forceDetect = 1'b1;
+rxElectricalIdle = 1'b0;
+#10
+forceDetect = 1'b0;
+#20
+rxElectricalIdle = 1'b1;
+#30
 substate = pollingConfiguration;//8 CONSEC TS2 WITH LINK = PAD AND LANE = PAD
 #10
 validOrderedSets = 1'b1;
