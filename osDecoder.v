@@ -49,8 +49,12 @@ end
 end
 always@(posedge clk)
 begin
-found = 1'b0;
+if(valid)
+begin
 valid = 1'b0;
+capacity = 12'd0;
+end
+found = 1'b0;
 if(validFromLMC)
 begin
 for(i=504;i>=0;i=i-8)
@@ -58,7 +62,7 @@ begin
 	if(data[i+:8]==COM &&!found/*||data[i+:8]==gen3TS1||data[i+:8]==gen3TS2||data[i+:8]==gen3SKIP*/)
 	begin
 	found = 1'b1;
-	if(capacity+i-((numberOfDetectedLanes-1)<<3) >= 128<<numberOfShifts || capacity+i-((numberOfDetectedLanes-1)<<3) >= 32<<numberOfShifts /*for skip*/)
+	if(capacity+i-((numberOfDetectedLanes-1)<<3) >= 128<<numberOfShifts)
 	begin
 	valid = 1'b1;
 	out = orderedSets|(data)<<capacity;
@@ -159,11 +163,11 @@ numberOfDetectedLanes = 5'd2;
 #8
 reset = 1;
 #10
-data = 128'hAABBAABBBCBC00000000000000000000;
+data = 512'hAABBAABBBCBC00000000000000000000;
 #10
-data = 128'hAABBAABBAABBAABBAABBAABBAABBAABB;
+data = 512'hAABBAABBAABBAABBAABBAABBAABBAABB;
 #10
-data = 128'h000000000000AABBAABBAABBBCBCAABB;
+data = 512'h000000000000AABBAABBAABBAABBAABB;
 #10
 data = 512'd0;
 #10

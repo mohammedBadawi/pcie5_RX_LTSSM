@@ -105,7 +105,7 @@ begin
 /******************************polling Active**************************************************/
 pollingActive1:
 begin
-    resetcounter = 1'b0; countup = 1'b0;
+    resetcounter = 1'b1; countup = 1'b0;
     if((valid && orderedset[15:8]==PAD && orderedset[23:16]==PAD && orderedset[43] == 1'b0 && orderedset[87:80] == TS1)||
     (valid && orderedset[15:8]==PAD && orderedset[23:16]==PAD && orderedset[87:80] == TS2)||
     (valid && orderedset[15:8]==PAD && orderedset[23:16]==PAD && orderedset[42] == 1'b1 && orderedset[87:80] == TS1)) 
@@ -130,6 +130,7 @@ begin
     else nextState = pollingActive1; 
     end
     else nextState = pollingActive2;
+	
 end
 /**********************************pollingConfiguration*****************************************************/
 pollingConfiguration1:

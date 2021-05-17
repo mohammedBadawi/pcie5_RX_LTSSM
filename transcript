@@ -138,3 +138,342 @@ run
 quit -sim
 # End time: 23:48:45 on May 16,2021, Elapsed time: 0:27:58
 # Errors: 0, Warnings: 1
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+vsim -gui work.osDecoderTB
+# vsim -gui work.osDecoderTB 
+# Start time: 00:02:10 on May 17,2021
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+add wave sim:/osDecoderTB/*
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.osDecoderTB
+# Loading work.osDecoder
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v failed with 1 errors.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 1 failed with 1 error.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.emadTB
+# End time: 02:39:22 on May 17,2021, Elapsed time: 2:37:12
+# Errors: 0, Warnings: 3
+# vsim -gui work.emadTB 
+# Start time: 02:39:22 on May 17,2021
+# Loading work.emadTB
+# Loading work.osDecoder
+# Loading work.RxLTSSM
+# Loading work.masterRxLTSSM
+# Loading work.timer
+# Loading work.osChecker
+# Loading work.counter
+# Loading work.comparator
+add wave sim:/emadTB/*
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.emadTB
+# Loading work.osDecoder
+# Loading work.RxLTSSM
+# Loading work.masterRxLTSSM
+# Loading work.timer
+# Loading work.osChecker
+# Loading work.counter
+# Loading work.comparator
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.emadTB
+# Loading work.osDecoder
+# Loading work.RxLTSSM
+# Loading work.masterRxLTSSM
+# Loading work.timer
+# Loading work.osChecker
+# Loading work.counter
+# Loading work.comparator
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.emadTB
+# Loading work.osDecoder
+# Loading work.RxLTSSM
+# Loading work.masterRxLTSSM
+# Loading work.timer
+# Loading work.osChecker
+# Loading work.counter
+# Loading work.comparator
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.emadTB
+# Loading work.osDecoder
+# Loading work.RxLTSSM
+# Loading work.masterRxLTSSM
+# Loading work.timer
+# Loading work.osChecker
+# Loading work.counter
+# Loading work.comparator
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.emadTB
+# Loading work.osDecoder
+# Loading work.RxLTSSM
+# Loading work.masterRxLTSSM
+# Loading work.timer
+# Loading work.osChecker
+# Loading work.counter
+# Loading work.comparator
+run
+# Compile of topmodule.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.emadTB
+run
+add wave -position end  sim:/emadTB/rxltssm/countersValues
+restart
+run
+add wave -position end  sim:/emadTB/rxltssm/masterRxLTSSM/currentState
+restart
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.emadTB
+# Loading work.osDecoder
+# Loading work.RxLTSSM
+# Loading work.masterRxLTSSM
+# Loading work.timer
+# Loading work.osChecker
+# Loading work.counter
+# Loading work.comparator
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.emadTB
+# Loading work.osDecoder
+# Loading work.RxLTSSM
+# Loading work.masterRxLTSSM
+# Loading work.timer
+# Loading work.osChecker
+# Loading work.counter
+# Loading work.comparator
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.emadTB
+# Loading work.osDecoder
+# Loading work.RxLTSSM
+# Loading work.masterRxLTSSM
+# Loading work.timer
+# Loading work.osChecker
+# Loading work.counter
+# Loading work.comparator
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.emadTB
+# Loading work.osDecoder
+# Loading work.RxLTSSM
+# Loading work.masterRxLTSSM
+# Loading work.timer
+# Loading work.osChecker
+# Loading work.counter
+# Loading work.comparator
+run
+add wave -position end  sim:/emadTB/rxltssm/genblk1[15]/osChecker/currentState
+add wave -position end  sim:/emadTB/rxltssm/genblk1[15]/osChecker/nextState
+restart
+run
+add wave -position end  sim:/emadTB/rxltssm/genblk1[0]/osChecker/currentState
+add wave -position end  sim:/emadTB/rxltssm/genblk1[0]/osChecker/nextState
+run
+restart
+run
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+# Compile of Timer.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of tb.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of comparator.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of osDecoder.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.emadTB
+# Loading work.osDecoder
+# Loading work.RxLTSSM
+# Loading work.masterRxLTSSM
+# Loading work.timer
+# Loading work.osChecker
+# Loading work.counter
+# Loading work.comparator
+run
+# End time: 04:37:21 on May 17,2021, Elapsed time: 1:57:59
+# Errors: 0, Warnings: 1

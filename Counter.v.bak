@@ -1,8 +1,8 @@
-module counter #(parameter width = 8)(input reset,input clk,input up,output reg [width-1 : 0] count);
+module counter (input reset,input clk,input up,output reg [4: 0] count);
 
 always @(posedge clk or negedge reset)
 begin
-if(!reset) count = {width{1'b0}};
+if(!reset) count = {4{1'b0}};
 else if (up) count = count + 1'b1;
 else count = count;
 end
