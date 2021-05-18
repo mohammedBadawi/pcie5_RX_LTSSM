@@ -1,0 +1,166 @@
+# Compile of DataHandling.v was successful.
+# Compile of Descrambler.v was successful.
+# Compile of Descrambler_tb.v was successful.
+# Compile of Lane_Management_Control.v was successful.
+# Compile of LFSR_8.v was successful.
+# Compile of LFSR_16.v was successful.
+# Compile of LFSR_32.v was successful.
+# Compile of LMC_tb.v was successful.
+# Compile of LPIF RX Control & Data Flow.v was successful.
+# Compile of LPIF_tb.v was successful.
+# Compile of Master.v was successful.
+# Compile of Modules Integration.v was successful.
+# Compile of PIPE_Rx_Data.v was successful.
+# Compile of PIPERxDataTb.v was successful.
+# Compile of UnStriping.v was successful.
+# Compile of comparator.v was successful.
+# Compile of Counter.v was successful.
+# Compile of Master_RX_LTSSM.v was successful with warnings.
+# Compile of OS_Checker.v was successful.
+# Compile of osDecoder.v was successful.
+# Compile of RxLTSSM.v was successful.
+# Compile of rxltssmTB.v was successful.
+# Compile of tb.v was successful.
+# Compile of Timer.v was successful.
+# Compile of topmodule.v was successful.
+# Compile of check_byte.v was successful.
+# Compile of Gen_ctrl.v was successful.
+# Compile of Gen_mux.v was successful.
+# Compile of Gen1_2_DataPath.v was successful.
+# Compile of packet_identifier.v was successful.
+# 30 compiles, 0 failed with no errors.
+vsim -gui work.RX_TB_Integration
+# vsim -gui work.RX_TB_Integration 
+# Start time: 16:47:25 on May 18,2021
+# Loading work.RX_TB_Integration
+# Loading work.RX
+# Loading work.LMC
+# Loading work.DataHandling
+# Loading work.UnStriping
+# Loading work.osDecoder
+# Loading work.RxLTSSM
+# Loading work.masterRxLTSSM
+# Loading work.timer
+# Loading work.packet_identifier
+# Loading work.Gen1_2_DataPath
+# Loading work.Gen_ctrl
+# Loading work.Gen_mux
+# Loading work.LPIF_RX_Control_DataFlow
+# Loading work.osChecker
+# Loading work.counter
+# Loading work.comparator
+# Loading work.check_byte
+# Loading work.PIPE_Rx_Data
+# Loading work.Descrambler
+# Loading work.LFSR_8
+# Loading work.LFSR_16
+# Loading work.LFSR_32
+# Loading work.Master
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[0]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[0]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[0]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[1]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[1]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[1]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[2]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[2]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[2]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[3]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[3]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[3]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[4]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[4]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[4]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[5]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[5]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[5]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[6]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[6]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[6]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[7]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[7]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[7]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[8]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[8]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[8]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[9]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[9]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[9]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[10]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[10]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[10]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[11]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[11]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[11]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[12]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[12]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[12]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[13]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[13]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[13]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[14]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[14]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[14]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'RxElectricalIdle'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/PIPE_Rx_Data.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[15]/PIPE File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 64
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_8.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[15]/descrambler/lfsr_8 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/LFSR_16.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/genblk1[15]/descrambler/lfsr_16 File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Descrambler.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (32) for port 'descramblerSyncHeader'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Lane_Management_Control.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/lmc File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 76
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'LMCValid'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Lane_Management_Control.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/lmc File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 76
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'validFromLMC'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/osDecoder.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/os File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 80
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'valid_pd'. The port definition is at: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/packet_identifier.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RX_TB_Integration/RX/packet_identifier File: C:/Users/Memad/OneDrive/Desktop/PCIe/RX_Topmodule/Modules Integration.v Line: 113
+add wave sim:/RX_TB_Integration/*
+run
+# End time: 16:48:08 on May 18,2021, Elapsed time: 0:00:43
+# Errors: 0, Warnings: 59
